@@ -8,6 +8,6 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 public class ProfileNotFoundException extends RuntimeException {
 
     public ProfileNotFoundException(String username) {
-        super(String.format("Profile not found with username=%s", username));
+        super(String.format("ProfileDto not found with username=%s", username));
     }
 }

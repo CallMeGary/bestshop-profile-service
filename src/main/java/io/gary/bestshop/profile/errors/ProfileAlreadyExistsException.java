@@ -8,6 +8,6 @@ import static org.springframework.http.HttpStatus.CONFLICT;
 public class ProfileAlreadyExistsException extends RuntimeException {
 
     public ProfileAlreadyExistsException(String username) {
-        super(String.format("Profile already exists with username=%s", username));
+        super(String.format("ProfileDto already exists with username=%s", username));
     }
 }

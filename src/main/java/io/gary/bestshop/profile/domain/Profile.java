@@ -1,5 +1,6 @@
 package io.gary.bestshop.profile.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,9 +14,12 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+
+import static java.math.BigDecimal.ZERO;
 
 @Data
 @Wither
@@ -36,6 +40,7 @@ public class Profile {
 
     @NotBlank
     @Length(min = 8, max = 16)
+    @JsonIgnoreProperties(allowSetters = true)
     private String password;
 
     @NotBlank
@@ -52,10 +57,19 @@ public class Profile {
 
     private String mobilePhone;
 
+    @JsonIgnoreProperties(allowGetters = true)
+    private Integer purchaseCount = 0;
+
+    @JsonIgnoreProperties(allowGetters = true)
+    private BigDecimal purchaseAmount = ZERO;
+
+    @JsonIgnoreProperties(allowGetters = true)
     private ProfileStatus status;
 
+    @JsonIgnoreProperties(allowGetters = true)
     private LocalDateTime createdAt;
 
+    @JsonIgnoreProperties(allowGetters = true)
     private LocalDateTime lastModifiedAt;
 
     private List<DeliveryAddress> deliveryAddresses;
