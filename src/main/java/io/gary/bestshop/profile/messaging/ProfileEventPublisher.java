@@ -1,10 +1,10 @@
 package io.gary.bestshop.profile.messaging;
 
+import io.gary.bestshop.messaging.dto.ProfileDto;
+import io.gary.bestshop.messaging.event.profile.ProfileCreatedEvent;
+import io.gary.bestshop.messaging.event.profile.ProfileDeletedEvent;
+import io.gary.bestshop.messaging.event.profile.ProfileUpdatedEvent;
 import io.gary.bestshop.profile.domain.Profile;
-import io.gary.bestshop.profile.messaging.event.profile.ProfileCreatedEvent;
-import io.gary.bestshop.profile.messaging.event.profile.ProfileDeletedEvent;
-import io.gary.bestshop.profile.messaging.event.profile.ProfileDto;
-import io.gary.bestshop.profile.messaging.event.profile.ProfileUpdatedEvent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.messaging.Message;
 import org.springframework.stereotype.Component;

@@ -1,7 +1,7 @@
 package io.gary.bestshop.profile.messaging;
 
 
-import io.gary.bestshop.profile.messaging.event.order.OrderCompletedEvent;
+import io.gary.bestshop.messaging.event.order.OrderCompletedEvent;
 import io.gary.bestshop.profile.service.ProfileService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
